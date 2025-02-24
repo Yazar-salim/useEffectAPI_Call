@@ -10,8 +10,8 @@ function App() {
     api();
   }, []);
 
-  const api = () => {
-    axios
+  const api = async() => {
+   await axios
       .get("https://dummyjson.com/users")
       .then((res) => {
         setData(res.data.users)
